@@ -15,16 +15,6 @@ namespace Fasetto.Word.ViewModel
         #region Private Members
 
         /// <summary>
-        /// The smallest width for the window to size
-        /// </summary>
-        public double WindowMinimumWidth { get; set; } = 400;
-
-        /// <summary>
-        /// The smallest height for the window to size
-        /// </summary>
-        public double WindowMinimumHeight { get; set; } = 400;
-
-        /// <summary>
         /// The window this view model controls
         /// </summary>
         /// <param name="window"></param>
@@ -39,6 +29,11 @@ namespace Fasetto.Word.ViewModel
         /// The radius of the edges of the window:
         /// </summary>
         private int mWindowsRadius = 10;
+
+        /// <summary>
+        /// The last known dock position
+        /// </summary>
+        private WindowDockPosition mDockPosition = WindowDockPosition.Undocked;
 
         #endregion
 
@@ -70,6 +65,18 @@ namespace Fasetto.Word.ViewModel
         #region Public Properties
 
         /// <summary>
+        /// The smallest width for the window to size
+        /// </summary>
+        public double WindowMinimumWidth { get; set; } = 400;
+
+        /// <summary>
+        /// The smallest height for the window to size
+        /// </summary>
+        public double WindowMinimumHeight { get; set; } = 400;
+
+        public bool Borderless { get { return (_mWindow.WindowState == WindowState.Maximized || mDockPosition != WindowDockPosition.Undocked); } }
+
+        /// <summary>
         /// The size of the resize border around the window
         /// </summary>
         public int ResizeBorder { get; set; } = 6;
@@ -82,7 +89,8 @@ namespace Fasetto.Word.ViewModel
         /// <summary>
         /// The padding for the inner content of the main window 
         /// </summary>
-        public Thickness InnerContentPadding { get { return new Thickness(ResizeBorder); } }
+        ///public Thickness InnerContentPadding { get { return new Thickness(ResizeBorder); } }
+        public Thickness InnerContentPadding { get; set; } = new Thickness(0);
 
         /// <summary>
         /// The margin around the window to allow for a drop shadow:
@@ -111,6 +119,7 @@ namespace Fasetto.Word.ViewModel
         {
             get
             {
+                // if it is maximized or docked, no border:
                 return _mWindow.WindowState == WindowState.Maximized ? 0 : mWindowsRadius;
             }
             set
@@ -130,6 +139,11 @@ namespace Fasetto.Word.ViewModel
         /// The height of the title bar/caption of the window
         /// </summary>
         public GridLength TitleHeightGridLength { get { return new GridLength(TitleHeight + ResizeBorder); } }
+
+        /// <summary>
+        /// The current application page, the page with the focus. 
+        /// </summary>
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
 
         #endregion
 

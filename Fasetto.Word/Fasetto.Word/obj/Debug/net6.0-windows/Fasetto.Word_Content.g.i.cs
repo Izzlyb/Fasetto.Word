@@ -27,6 +27,7 @@
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-semibolditalic.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-thin.ttf")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("fonts/lato-thinitalic.ttf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/backgrounds/emoji-background.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/logos/icon.ico")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/logos/logo-small.png")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/logos/logo.png")]
