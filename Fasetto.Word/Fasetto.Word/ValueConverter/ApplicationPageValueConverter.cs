@@ -1,13 +1,10 @@
-﻿
-using Fasetto.Word.Pages;
-using System;
+﻿using System;
 using System.Globalization;
 
 namespace Fasetto.Word
 {
     public class ApplicationPageValueConverter : BaseValueConverter<ApplicationPageValueConverter>
     {
-
         /// <summary>
         /// Converts the <see cref="ApplicationPage"/> the enum to an actual view/page instance.
         /// </summary>
@@ -29,7 +26,6 @@ namespace Fasetto.Word
                     return null;
             }
         }
-
 
         public override object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {

@@ -26,7 +26,7 @@
                          <!-- border with the dropshadow margin t -->
                         <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=10}" >
                             
-                             <!--  Window outline  -->
+                             <!--  Main Window outline  -->
                             <Grid >
                                 
                                 <!-- Opacity Mask for corners on grid -->
@@ -62,7 +62,7 @@
                                     </Grid.RowDefinitions>
 
                                     <!-- The Title Bar itself, with 3 columns  -->
-                                    <Grid Grid.Row="0" Panel.ZIndex="1" >
+                                    <Grid Grid.Column="0" Grid.Row="0" Panel.ZIndex="1" >
 
                                         <Grid.ColumnDefinitions>
                                             <!-- Icon -->
@@ -108,18 +108,13 @@
                                     
                                     <!-- Page Content -->
                                     <Border Grid.Row="1" Padding="{Binding InnerContentPadding}" Background="{StaticResource WordBlueBrush}" >
-                                    
-                                    <Border Grid.Row="1" Padding="{Binding InnerContentPadding}" >
                                         <Border>
                                             <Border.Background>
                                                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute" 
                                                     Viewport="0 0 500 500" ImageSource="/Images/Backgrounds/emoji-background.png" />
                                             </Border.Background>
-                                            
                                             <ContentPresenter Content="{TemplateBinding Content}" />
                                         </Border>
-                                    </Border>
-
                                     </Border>
                                 </Grid>
                                
@@ -140,7 +135,25 @@
             />
     </WindowChrome.WindowChrome>
 
-    <Grid Background="{StaticResource ForegroundLightBrush}">
-        <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" />
-    </Grid>
+    <Border Background="{StaticResource WordBlueBrush}">
+
+        <!--<Grid Background="{StaticResource ForegroundLightBrush}">
+            <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" />
+        </Grid>-->
+        <Grid>
+
+            <Grid.Background>
+
+                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" 
+                            Viewport="0 0 500 500" ImageSource="/Images/Backgrounds/emoji-background.png" />
+
+            </Grid.Background>
+
+            <Frame x:Name="MainFrame" Content="{Binding CurrentPage, Converter={local:ApplicationPageValueConverter}}" />
+
+        </Grid>
+
+    </Border>
+
+
 </Window>

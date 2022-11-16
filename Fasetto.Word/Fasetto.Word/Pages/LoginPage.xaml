@@ -1,21 +1,22 @@
-﻿<Page x:Class="Fasetto.Word.Pages.LoginPage"
+﻿<local:BasePage x:TypeArguments="local:LoginViewModel" x:Class="Fasetto.Word.LoginPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:Fasetto.Word.Pages"
+      xmlns:local="clr-namespace:Fasetto.Word" 
       mc:Ignorable="d" 
+      x:Name="Page"
       d:DesignHeight="500" d:DesignWidth="500"
       Title="LoginPage">
-    
-    <Border Background="{StaticResource WordBlueBrush}">
+
+    <Border>
 
         <Grid>
-            <Grid.Background >
+            <!--<Grid.Background >
                 <ImageBrush TileMode="Tile" ViewportUnits="Absolute" 
                             Viewport="0 0 500 500" 
                             ImageSource="/Images/Backgrounds/emoji-background.png" />
-            </Grid.Background>
+            </Grid.Background>-->
             
             <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
 
@@ -32,7 +33,7 @@
 
                         <StackPanel>
                             <!-- Sign up Header -->
-                            <TextBlock Text="Sign Up" 
+                            <TextBlock Text="Sign In" 
                                        FontSize="{StaticResource FontSizeLarge}"
                                        FontFamily="{StaticResource LatoRegular}" 
                                        Foreground="{StaticResource WordBlueBrush}" />
@@ -44,14 +45,19 @@
                                        Margin="0 0 0 20"/>
 
                             <!-- Email text box-->
-                            <TextBox Tag="E-mail" />
+                            <TextBox Tag="E-mail" 
+                                     Text="{Binding Email}" />
                             
                             <!-- Password text box -->
                             <PasswordBox Tag="Password" 
+                                         x:Name="PasswordText"
                                          Margin="0 0 0 30" />
 
                             <!-- Next Button -->
-                            <Button Content="Next" HorizontalAlignment="Center" />
+                            <Button Content="Next" HorizontalAlignment="Center" 
+                                    Command="{Binding LoginCommand}" 
+                                    CommandParameter="{Binding ElementName=Page}" 
+                                    local:IsBusyProperty.Value="{Binding LoginIsRunning}"/>
                             
                         </StackPanel>
                     </Border>
@@ -65,4 +71,4 @@
         </Grid>
         
     </Border>
-</Page>
+</local:BasePage>
