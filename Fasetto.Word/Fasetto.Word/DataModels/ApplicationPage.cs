@@ -9,6 +9,11 @@ namespace Fasetto.Word
         /// <summary>
         /// The initial login page:
         /// </summary>
-        Login = 0
+        Login = 0, 
+
+        /// <summary>
+        /// The Chat Page:
+        /// </summary>
+        Chat = 1
     }
 }

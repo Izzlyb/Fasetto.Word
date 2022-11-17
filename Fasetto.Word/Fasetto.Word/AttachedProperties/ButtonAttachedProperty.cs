@@ -9,6 +9,5 @@ namespace Fasetto.Word
     {
 
 
-
     }
 }

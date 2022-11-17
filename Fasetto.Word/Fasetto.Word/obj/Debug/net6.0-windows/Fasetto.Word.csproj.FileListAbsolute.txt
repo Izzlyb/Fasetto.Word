@@ -27,11 +27,12 @@ E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\bin\
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\bin\Debug\net6.0-windows\Fasetto.Word.dll
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\bin\Debug\net6.0-windows\Fasetto.Word.pdb
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Fasetto.Word.csproj.AssemblyReference.cache
-E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Styles\Buttons.baml
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Styles\Colors.baml
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Styles\Fonts.baml
+E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Styles\Icons.baml
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Styles\Windows.baml
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\MainWindow.g.cs
+E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Pages\ChatPage.g.cs
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Pages\LoginPage.g.cs
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\App.g.cs
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Fasetto.Word_Content.g.cs
@@ -40,7 +41,9 @@ E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Fasetto.Word_MarkupCompile.lref
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\App.baml
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\MainWindow.baml
+E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Pages\ChatPage.baml
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Pages\LoginPage.baml
+E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Styles\Buttons.baml
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Styles\Texts.baml
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Fasetto.Word.g.resources
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Fasetto.Word.GeneratedMSBuildEditorConfig.editorconfig
@@ -54,4 +57,5 @@ E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Fasetto.Word.pdb
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Fasetto.Word.genruntimeconfig.cache
 E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\ref\Fasetto.Word.dll
-E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Styles\Icons.baml
+E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Controls\SideMenuControl.g.cs
+E:\Software Developmnt 2022\AngelSix\Fasetto.Word\Fasetto.Word\Fasetto.Word\obj\Debug\net6.0-windows\Controls\SideMenuControl.baml

@@ -67,7 +67,7 @@ namespace Fasetto.Word.ViewModel
         /// <summary>
         /// The smallest width for the window to size
         /// </summary>
-        public double WindowMinimumWidth { get; set; } = 400;
+        public double WindowMinimumWidth { get; set; } = 800;
 
         /// <summary>
         /// The smallest height for the window to size
@@ -143,7 +143,7 @@ namespace Fasetto.Word.ViewModel
         /// <summary>
         /// The current application page, the page with the focus. 
         /// </summary>
-        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Login;
+        public ApplicationPage CurrentPage { get; set; } = ApplicationPage.Chat;
 
         #endregion
 
