@@ -105,11 +105,7 @@
                             CornerRadius="10"
                             BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" 
                             SnapsToDevicePixels="true">
-                        <!--<ContentPresenter x:Name="contentPresenter" Focusable="False" 
-                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                          Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" 
-                                          SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>-->
-
+                        
                         <Grid>
                         
                             <TextBlock Text="{TemplateBinding Content}"
@@ -212,8 +208,6 @@
         </Setter>
     </Style>
 
-
-
     <!-- Icon Button -->
     <Style x:Key="IconButton" TargetType="{x:Type Button}" BasedOn="{StaticResource BaseStyle}">
         <Setter Property="Background" Value="{StaticResource WordBlueBrush}" />
@@ -273,6 +267,7 @@
                         </Trigger>
                     
                     </ControlTemplate.Triggers>
+                    
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -282,6 +277,7 @@
 
 
 
+                        
 
 
-
+                        

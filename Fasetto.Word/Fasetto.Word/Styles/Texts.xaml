@@ -84,7 +84,6 @@
 
     <Style TargetType="{x:Type PasswordBox}" BasedOn="{StaticResource BaseStyle}" >
 
-        <Setter Property="BorderBrush" Value="{StaticResource WordBlueBrush}"/>
         <Setter Property="FontSize" Value="{StaticResource FontSizeLarge}" />
         <Setter Property="FontFamily" Value="{StaticResource LatoRegular}" />
         <Setter Property="Padding" Value="10" />
@@ -148,8 +147,6 @@
         <Setter Property="FontFamily" Value="{StaticResource FontAwesome}" />
         <Setter Property="Text" Value="{StaticResource FontAwesomeSpinner}" />
         <Setter Property="RenderTransformOrigin" Value="0.5,0.5" />
-
-        <!--<Setter Property="Text" Value="&#xe1d4;" />-->
 
         <Setter Property="RenderTransform" >
             <Setter.Value>

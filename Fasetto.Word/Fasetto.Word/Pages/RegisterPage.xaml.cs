@@ -4,11 +4,11 @@ using Fasetto.Word.Core;
 namespace Fasetto.Word
 {
     /// <summary>
-    /// Interaction logic for LoginPage.xaml
+    /// Interaction logic for RegisterPage.xaml
     /// </summary>
-    public partial class LoginPage : BasePage<LoginViewModel>, IHavePassword
+    public partial class RegisterPage : BasePage<LoginViewModel>, IHavePassword
     {
-        public LoginPage()
+        public RegisterPage()
         {
             InitializeComponent();
         }
