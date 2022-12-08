@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Fasetto.Word.Core;
+using Fasetto.Word.Core.IoC;
 
 namespace Fasetto.Word
 {
@@ -87,8 +88,11 @@ namespace Fasetto.Word
         private async Task RegisterAsync()
         {
 
-            // TODO: go to RegisterAsync page:
-            await Task.Delay(500);
+            IoC.Get<ApplicationViewModel>().SideMenuVisible ^= true;
+
+            IoC.Get<ApplicationViewModel>().CurrentPage = ApplicationPage.Register;
+            
+            await Task.Delay(100);
 
             /// ((WindowViewModel)((MainWindow)Application.Current.MainWindow).DataContext).CurrentPage = ApplicationPage.Register;
         }

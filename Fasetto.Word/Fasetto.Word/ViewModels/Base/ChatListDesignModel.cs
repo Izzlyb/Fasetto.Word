@@ -1,12 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.Xml.Linq;
 
 namespace Fasetto.Word
 {
     public class ChatListDesignModel : ChatListViewModel
     {
-
         public static ChatListDesignModel Instance => new ChatListDesignModel();
-
 
         public ChatListDesignModel()
         {
@@ -14,59 +13,44 @@ namespace Fasetto.Word
             {
                 new ChatListItemViewModel
                 {
-                    Name = "Jacob",
-                    Initials = "JB",
-                    Message = "The membership begins either after a customer completes their second order",
-                    ProfilePictureRGB = "17ff26",
+                    Initials = "DC",
+                    Name = "Douglas",
+                    Message = "The easiest way to use an Island inside an app is to use the NuGet...",
+                    ProfilePictureRGB = "a3cc15",
                     NewContentAvailable = true
                 },
                 new ChatListItemViewModel
                 {
-                    Name = "Carter",
-                    Initials = "CT",
-                    Message = "To delete a watchlist, start by going to the Settings menu by clicking the gear icon",
-                    ProfilePictureRGB = "e8b527",
+                    Initials = "JJ",
+                    Name = "Johanna",
+                    Message = "The templates featured below also work with OpenOffice and Google Spreadsheet...",
+                    ProfilePictureRGB = "d3bf23",
+                    NewContentAvailable = true
+                },
+                new ChatListItemViewModel
+                {Initials = "KI", Name = "Keith", Message = "Top companies choose Udemy Business to build in-demand...", ProfilePictureRGB = "7c2f17", NewContentAvailable = true},
+                new ChatListItemViewModel
+                {
+                    Initials = "SL",
+                    Name = "Shirley",
+                    Message = "Font Awesome Kits are the easiest way to get Font Awesome icons into your projects",
+                    ProfilePictureRGB = "5f1c99",
                     NewContentAvailable = true
                 },
                 new ChatListItemViewModel
                 {
-                    Name = "Emma",
-                    Initials = "EM",
-                    Message = "We welcome you to join one or all of the sessions.",
-                    ProfilePictureRGB = "e08019",
-                    NewContentAvailable = false
+                    Initials = "NC",
+                    Name = "Nicole",
+                    Message = "Most electronic devices should work fine with an UPS that has a simulated sine",
+                    ProfilePictureRGB = "372ad2",
+                    NewContentAvailable = true
                 },
                 new ChatListItemViewModel
-                {
-                    Name = "Thomas",
-                    Initials = "TM",
-                    Message = "Build a foundation of technical analysis with support, resistance and trends",
-                    ProfilePictureRGB = "ff3e17",
-                    NewContentAvailable = false
-                }
+                {Initials = "TC", Name = "Thomas", Message = "Someone will tell me about their Security+ exam experience", ProfilePictureRGB = "b37f98", NewContentAvailable = true},
+                new ChatListItemViewModel
+                {Initials = "AA", Name = "Aaron", Message = "We’re improving developer productivity by moving the main devenv.exe process from 32-bit to 64-bit.", ProfilePictureRGB = "c72f17", NewContentAvailable = true},
             };
         }
     }
 }
-
-
-
-//,
-//                new ChatListItemViewModel
-//                {
-//                    Name = "Shirley",
-//                    Initials = "SL",
-//                    Message = "Font Awesome Kits are the easiest way to get Font Awesome icons into your projects",
-//                    ProfilePictureRGB = "e017ff",
-//                    NewContentAvailable = true
-//                },
-//                new ChatListItemViewModel
-//                {
-//                    Name = "Nicole",
-//                    Initials = "NC",
-//                    Message = "Most electronic devices should work fine with an UPS that has a simulated sine wave outpu",
-//                    ProfilePictureRGB = "17ff70",
-//                    NewContentAvailable = true
-//                }
-
 

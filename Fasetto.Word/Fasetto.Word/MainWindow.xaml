@@ -4,7 +4,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Fasetto.Word"
-        xmlns:core="clr-namespace:Fasetto.Word.Core;assembly=Fasetto.Word.Core"
         mc:Ignorable="d"
         WindowStyle="None"
         AllowsTransparency="True"
@@ -14,7 +13,7 @@
         Title="Fasatto.Word Welcomes you..." 
         MinWidth="{Binding WindowMinimumWidth}"
         MinHeight="{Binding WindowMinimumHeight}"
-        Height="600" Width="1000">
+        Height="600" Width="900">
 
     <Window.Resources>
         <Style TargetType="{x:Type local:MainWindow}" >
@@ -23,7 +22,7 @@
                     <ControlTemplate TargetType="{x:Type Window}">
 
                         <!-- Outer border with the dropshadow margin t -->
-                        <Border Padding="{Binding OuterMarginSizeThickness, FallbackValue=20}" >
+                        <Border Margin="{Binding OuterMarginSizeThickness, FallbackValue=0}" >
 
                             <!--  Main Window outline  -->
                             <Grid >
@@ -98,7 +97,7 @@
                                         <StackPanel Grid.Column="2" Orientation="Horizontal" >
                                             <Button Content="_" Style="{StaticResource WindowControlButton}"
                                                     Command="{Binding MinimizeCommand}" />
-                                            <Button Content="[]" Style="{StaticResource WindowControlButton}" 
+                                            <Button Content="[ ]" Style="{StaticResource WindowControlButton}" 
                                                     Command="{Binding MaximizeCommand}" />
                                             <Button Content="X" Style="{StaticResource WindowCloseButton}"
                                                     Command="{Binding CloseCommand}"/>
@@ -106,15 +105,9 @@
                                     </Grid>
 
                                     <!-- Page Content -->
-                                    <Border Grid.Row="1" Padding="{Binding InnerContentPadding}" Background="{StaticResource WordBlueBrush}" >
-                                        <!--<Border >
-                                            <Border.Background>
-                                                <ImageBrush TileMode="Tile" ViewportUnits="Absolute" 
-                                                            Viewport="0 0 500 500" 
-                                                            ImageSource="/Images/Backgrounds/emoji-background.png" />
-                                            </Border.Background>
-                                            <ContentPresenter Content="{TemplateBinding Content}" />
-                                        </Border>-->
+                                    <Border Grid.Row="1" Padding="{Binding InnerContentPadding}" 
+                                            ClipToBounds="True"
+                                            Background="{StaticResource WordBlueBrush}" >
                                         <ContentPresenter Content="{TemplateBinding Content}" />
                                     </Border>
                                 </Grid>
@@ -124,7 +117,6 @@
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-
         </Style>
     </Window.Resources>
 
@@ -142,7 +134,7 @@
         <Grid>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="300" />
+                <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
@@ -154,14 +146,17 @@
 
             <Frame Grid.Column="1" 
                    x:Name="MainFrame" 
-                   Content="{Binding ApplicationViewModel.CurrentPage, ElementName =AppWindow, Converter={local:ApplicationPageValueConverter}}"
+                   Content="{Binding ApplicationViewModel.CurrentPage, 
+                                        Source={x:Static local:ViewModelLocator.Instance}, 
+                                        Converter={local:ApplicationPageValueConverter}}"
                    Background="Transparent" />
 
             <!-- Side Menu control -->
-            <local:SideMenuControl>
+            <local:SideMenuControl
+                local:AnimateSlideInFromLeftProperty.Value="{Binding ApplicationViewModel.SideMenuVisible , 
+                                        Source={x:Static local:ViewModelLocator.Instance}}">
                 
-                <!--<Button Content="Test" />-->
-                <local:ChatListControl />
+                <local:ChatListControl/>
 
             </local:SideMenuControl>
 

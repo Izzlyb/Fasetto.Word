@@ -8,13 +8,17 @@
              d:DesignHeight="400" d:DesignWidth="300">
 
     <Grid DataContext="{x:Static local:ChatListDesignModel.Instance}" Background="{StaticResource ForegroundLightBrush}" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
 
         <ScrollViewer VerticalScrollBarVisibility="Auto" >
             <ItemsControl ItemsSource="{Binding Items}" >
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
 
-                        <local:ChatListItemControl/>
+                        <local:ChatListItemControl />
 
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>

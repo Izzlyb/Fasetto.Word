@@ -16,12 +16,12 @@ namespace Fasetto.Word
         /// </summary>
         public ChatListItemDesignModel()
         {
-            Initials = "DB";
+            Initials = "JJ";
 
-            Name = "Debra";
+            Name = "Johanna";
 
             // Message = "This chat app is awesome!!! I bet it will be fast too...";
-            Message = "The easiest way to use an Island inside an app is to use the NuGet packages that we provide";
+            Message = "The easiest way to go to an Island is flying";
 
             ProfilePictureRGB = "7fff17";
             
